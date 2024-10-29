@@ -1,0 +1,97 @@
+Task Management App
+
+A responsive task management app built with React and Material-UI (MUI). This app allows users to add, categorize, and manage tasks in a visually organized way, with each task falling under one of four categories: **Pending**, **To-Do**, **Doing**, and **Done**. 
+
+## Features
+
+- Task Categorization: Organize tasks into customizable categories.
+- Add/Edit/Delete Tasks: Quickly add new tasks with details like title, subtitle, label, and estimated time.
+- Mark Task Completion:  Toggle task completion and move between categories.
+- Responsive Design: Layout adapts to various screen sizes for optimal user experience.
+- Persistent Storage: Saves tasks locally using Local Storage.
+- Modern UI: Styled with Material-UI for a clean, professional look.
+
+## Getting Started
+
+### Prerequisites
+
+Make sure you have the following installed:
+- [Node.js](https://nodejs.org/) (version 14 or later)
+- [npm](https://www.npmjs.com/) (usually comes with Node.js)
+
+### Installation
+
+1. Clone the Repository:
+   bash
+   git clone https://github.com/Shreyashah-29/Task-Management.git
+   cd task-management
+  
+
+2. Install Dependencies:
+   bash
+   npm install
+   
+
+3. Run the App:
+   bash
+   npm start
+  
+
+4. Open the App:
+   - Visit `http://localhost:3000` in your browser to view the app.
+
+## Project Structure
+
+```plaintext
+src/
+├── components/
+│   ├── TaskItem.tsx       # Displays individual task details
+│   ├── TaskList.tsx       # Renders categorized task lists
+│   └── AddTaskForm.tsx    # Modal form to add new tasks
+├── App.tsx                # Main app layout
+├── Types/types.ts         # Type definitions for props and tasks
+└── Utility/LocalStorage.ts# Utility for saving/loading tasks from local storage
+```
+
+## Usage
+
+1. Add a Task:
+   - Click "Add Task" under any category.
+   - Fill in the task title, subtitle, label (e.g., Important, Test), and estimated time.
+   - Click "Save" to add the task to the selected category.
+
+2. Move Task Between Categories:
+   - Use the **menu button** on each task card to select a new status (Pending, To-Do, Doing, or Done).
+   - The task will automatically move to the chosen category.
+
+3. Delete a Task:
+   - Click the "delete icon" on a task to remove it from the list.
+
+## Customization
+
+- Change Categories: You can adjust or add categories by updating the `TaskStatus` type in `types.ts`.
+- Theme Customization: Modify Material-UI theme styles in `App.tsx` or individual component files to match a different color scheme or style.
+
+## Technologies Used
+
+- React: Frontend framework for building user interfaces.
+- Material-UI (MUI): Component library for responsive and styled components.
+- TypeScript: Typed JavaScript for improved readability and error checking.
+- Local Storage: Browser storage for persisting task data locally.
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- [Material-UI Documentation](https://mui.com/) for component styling and theme guidance
+- [UUID](https://www.npmjs.com/package/uuid) for generating unique task IDs
